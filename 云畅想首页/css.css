@@ -1,0 +1,28 @@
+*{margin: 0;padding: 0;}
+*{text-decoration: none;}
+.zhengti{
+	width: 1250px;
+	height: 1400px;
+	background-color: red;
+	margin:auto;
+	margin-top: 25px;
+}
+.toubu{
+	width: 1250px;
+	height: 250px;
+	background-color: blue;
+}
+.li{
+	float: left;
+	margin:auto;
+	list-style: none;
+    margin-left: 10px;
+}
+.toubu p{
+	float: left;
+	margin-left: 140px;
+}
+.toubu span{
+	float:left;
+	margin-left: 385px;
+}

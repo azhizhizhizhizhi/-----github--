@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="textml;charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<title>云畅想平台首页</title>
+	<script src="jquery-1.11.1.js"></script>
+	<style type="text/css">
+        body {
+            font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+            font-size:14px;
+        }
+
+/*侧边栏
+*/
+		.tou{
+			width: 200px;
+			height: 500px;
+			margin: auto;
+			margin-top: -193px;
+		}
+		#toudiv{
+			width: 200px;
+			height: 200px;
+			position: fixed;
+			top: 617px;
+			left: 1408px;
+			display: none;
+		}
+		
+		#panel{
+			position: absolute;
+			top: -76px;
+			left: -183px;
+			
+		}
+		.content{
+			display: none;
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			top: 175px;
+			left: 52px;
+		} 
+		.head{
+			position: relative;
+			top: 228px;
+			left: 222px;
+		}
+		#goto-top {
+			position: absolute;
+			width: 110px;
+			height: 71px;
+			top: -71px;
+			left: -5px;
+		}
+		.123{
+			display: none;
+		}
+		#dest{
+			width:100px;
+			height:20px;
+			position: absolute;
+
+			display: block;
+		}
+		
+		.cebian{
+			position: absolute;
+
+			background: url(ding2.png);
+			width: 100px;
+			height: 190px;
+		}
+		.tou1{
+			float: left;
+			color: black;
+			margin-top: 8px;
+			margin-left: 25px;
+			font-size: 12px;
+		}
+		.tou2{
+			float: 10px;
+		}
+/*搜索框
+*/
+
+
+        
+        fieldset.search {
+            padding: 0px;
+            border: none;
+            width: auto;
+            background:#e0e0e0;
+        }
+
+        fieldset.search:hover {
+            background: #a8a8a8;
+        }
+        .search input, .search button {
+            border: none;
+            float: left;
+            font-size: 12px;
+        }
+        .search input.box {
+            height: 28px;
+            width: 200;
+            margin-right: 0px;
+            padding-right: 0px;
+            background: #e0e0e0;
+            margin: 1px;
+            font-size: 12px;
+        }
+        .search input.box:focus {
+            background: #e8e8e8 ;
+            outline: none;
+            font-size: 20px;
+        }
+        .search button.btn {
+            border: none;
+            width: 28px;
+            height: 28px;
+            margin: 0px auto;
+            margin: 1px;
+            background: url(search_blue.png) no-repeat top right;
+        }
+        .search button.btn:hover {
+            background: url(search_black.png) no-repeat bottom right;
+        }
+
+/*主页
+*/
+		.bigbox{
+			background:url(firstbackground.png);
+			width: 1258px;
+			height: 1350px;
+			margin: auto;
+		}
+		.first{
+            width: 980px;
+			height: 1350px;
+			margin: auto;
+			font-size: 18px;
+		}
+		.navp{
+			width: auto;
+			height: 51px;
+		}
+		.navp:hover{
+			background: red;
+		}
+		.first2{
+			width: 340px;
+			height: auto;
+			margin: auto;
+			background: red;
+			margin-left: 309px;
+			margin-top: 117px;
+
+		}
+         
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".head,.content").hover(function(){
+				$(".content").show();},function(){
+					$(".content").hide();
+				});
+		});
+		$(function(){
+			$(window).scroll(function(){
+				var scroll_top = $(document).scrollTop();
+				if(scroll_top>0){
+					$("#toudiv").fadeIn(500);
+				}else{
+					$("#toudiv").fadeOut(500);
+				}
+				$("#dest").val(scroll_top);
+			});
+			$("#goto-top").click(function(e){
+				e.preventDefault();
+				$(document.documentElement).animate({
+					scrollTop: 0
+				},200);
+				$(document.body).animate({
+					scrollTop: 0
+				},200);
+			});
+
+		})
+	</script>
+</head>
+<body>
+	<div class="bigbox">
+	    <div class="first">
+	        <div class="first1">
+	        	<div class="first11">
+		    		<span class="navp">&nbsp;&nbsp;&nbsp;云畅想&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    	    <a href="">首页&nbsp;&nbsp;&nbsp;</a>
+		    	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    	    <span class="navp">资料共享&nbsp;&nbsp;&nbsp;</span>
+		    	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    	    <span class="navp">作业管理&nbsp;&nbsp;&nbsp;</span>
+		    	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    	    <span class="navp">答疑讨论&nbsp;&nbsp;</span>
+		    	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="首页/renqi.png">&nbsp;<span>人妻白熊</span>
+		    	</div>
+                <img src="首页/云畅享，云学习.png" style="margin-left: 370px;">
+	    	</div>
+		    <div class="first2">
+		    		<div>
+				        <form method="get" id="searchform" >
+				            <fieldset class="search">
+				               <button class="btn" title="SEARCH">&nbsp;</button> 
+				               <input type="text" class="box" name="s" id="s" class="inputText" placeholder="搜索" x-webkit-speech>
+				           </fieldset>
+				       </form>
+                    </div>
+		    </div>
+		    
+		    <div>
+		    	d
+		    </div>
+		    <div>
+		    	d
+		    </div>
+		</div>
+	</div>
+	<div class="tou">
+			<div id="toudiv">
+				<div id="panel">
+					<img src="erweima.png"  class="head">
+					<div class="content">
+						<img src="erweima.png">
+					</div>
+				</div>
+				<a href="#" title="返回顶部" id="goto-top">
+					<img src="ding1.png" class="123">
+				</a>
+				<div class="cebian">
+					<div id="panel">
+						<img src="erweima.png"  class="head">
+						<div class="content">
+							<img src="erweima2.png">
+						</div>
+					</div>
+					<a href="" class="tou1"  style="margin-top: 33px;">资料共享</a>
+					<a href="" class="tou1">作业管理</a>
+					<a href="" class="tou1">答疑讨论</a>
+				</div>
+			</div>
+    </div>
+</body>
+</html>
